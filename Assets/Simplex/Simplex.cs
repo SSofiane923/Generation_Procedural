@@ -26,6 +26,14 @@ public class Simplex : ProceduralGenerationMethod
 
     protected override async UniTask ApplyGeneration(CancellationToken cancellationToken)
     {
+        var main = Camera.main;
+        var value = math.max(Grid.Width, Grid.Lenght);
+        if(main)
+        {
+            main.orthographicSize = value / 2;
+            main.transform.position = new Vector3(value/2, 20, value/2);
+        }
+
         var noise = new FastNoiseLite(RandomService.Seed);
         noise.SetFrequency(frequency);
         noise.SetFractalOctaves(octave);
@@ -60,12 +68,16 @@ public class Simplex : ProceduralGenerationMethod
                 {
                     tileName = GRASS_TILE_NAME;
                 }
-                else if (noisemap[x][y] > grassHeight)
+                else if (noisemap[x][y] > grassHeight && noisemap[x][y] < RockHeight)
                 {
                     tileName = ROCK_TILE_NAME;
                 }
+                else if (noisemap[x][y] > RockHeight)
+                {
+                    tileName = SNOW_TILE_NAME;
+                }
 
-                AddTileToCell(cell, tileName, true);
+                    AddTileToCell(cell, tileName, true);
             }
         }
     }

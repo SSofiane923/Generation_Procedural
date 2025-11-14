@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1213fa7e0dfb87548b5bf4f15d36c2e2, type: 3}
   m_Name: Simplex
   m_EditorClassIdentifier: 
-  _maxSteps: 1000
+  _maxSteps: 10
   noiseType: 0
-  frequency: 0.08
-  amplitude: 0.198
+  frequency: 0.016
+  amplitude: 0.187
   fractalType: 0
-  octave: 2
-  lacunarity: 0.144
-  persistence: 0.246
-  waterHeight: -0.77
-  sandHeight: 0.81
-  grassHeight: -0.58
-  RockHeight: 1
+  octave: 3
+  lacunarity: 0.202
+  persistence: 0.209
+  waterHeight: -0.88
+  sandHeight: -0.76
+  grassHeight: 0.39
+  RockHeight: 0.89

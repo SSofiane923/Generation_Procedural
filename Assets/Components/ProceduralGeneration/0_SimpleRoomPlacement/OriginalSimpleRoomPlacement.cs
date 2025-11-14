@@ -8,8 +8,8 @@ using VTools.ScriptableObjectDatabase;
 
 namespace Components.ProceduralGeneration.SimpleRoomPlacement
 {
-    [CreateAssetMenu(menuName = "Procedural Generation Method/Simple Room Placement")]
-    public class SimpleRoomPlacement : ProceduralGenerationMethod
+    [CreateAssetMenu(menuName = "Procedural Generation Method/Original Simple Room Placement")]
+    public class OriginalSimpleRoomPlacement : ProceduralGenerationMethod
     {
         [Header("Room Parameters")]
         [SerializeField] private int _maxRooms = 10;
